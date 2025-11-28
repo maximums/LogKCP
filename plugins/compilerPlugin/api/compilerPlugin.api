@@ -1,0 +1,42 @@
+public final class com/maximums/FileMessageCollector : org/jetbrains/kotlin/cli/common/messages/MessageCollector {
+	public fun <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/cli/common/messages/MessageCollector;)V
+	public fun clear ()V
+	public fun hasErrors ()Z
+	public fun report (Lorg/jetbrains/kotlin/cli/common/messages/CompilerMessageSeverity;Ljava/lang/String;Lorg/jetbrains/kotlin/cli/common/messages/CompilerMessageSourceLocation;)V
+}
+
+public final class com/maximums/LogKCPCommandLineProcessor : org/jetbrains/kotlin/compiler/plugin/CommandLineProcessor {
+	public static final field Companion Lcom/maximums/LogKCPCommandLineProcessor$Companion;
+	public static final field IR_DUMP_FILE Ljava/lang/String;
+	public fun <init> ()V
+	public fun appendList (Lorg/jetbrains/kotlin/config/CompilerConfiguration;Lorg/jetbrains/kotlin/config/CompilerConfigurationKey;Ljava/lang/Object;)V
+	public fun appendList (Lorg/jetbrains/kotlin/config/CompilerConfiguration;Lorg/jetbrains/kotlin/config/CompilerConfigurationKey;Ljava/util/List;)V
+	public fun applyOptionsFrom (Lorg/jetbrains/kotlin/config/CompilerConfiguration;Ljava/util/Map;Ljava/util/Collection;)V
+	public fun getPluginId ()Ljava/lang/String;
+	public fun getPluginOptions ()Ljava/util/Collection;
+	public fun processOption (Lorg/jetbrains/kotlin/compiler/plugin/AbstractCliOption;Ljava/lang/String;Lorg/jetbrains/kotlin/config/CompilerConfiguration;)V
+	public fun processOption (Lorg/jetbrains/kotlin/compiler/plugin/CliOption;Ljava/lang/String;Lorg/jetbrains/kotlin/config/CompilerConfiguration;)V
+}
+
+public final class com/maximums/LogKCPCommandLineProcessor$Companion {
+	public final fun getIR_DUMP_FILE_PATH_KEY ()Lorg/jetbrains/kotlin/config/CompilerConfigurationKey;
+}
+
+public final class com/maximums/PluginComponentRegistrar : org/jetbrains/kotlin/compiler/plugin/CompilerPluginRegistrar {
+	public fun <init> ()V
+	public fun getSupportsK2 ()Z
+	public fun registerExtensions (Lorg/jetbrains/kotlin/compiler/plugin/CompilerPluginRegistrar$ExtensionStorage;Lorg/jetbrains/kotlin/config/CompilerConfiguration;)V
+}
+
+public final class com/maximums/ir/LogKCPIrGenerationExtension : org/jetbrains/kotlin/backend/common/extensions/IrGenerationExtension {
+	public fun <init> (Lorg/jetbrains/kotlin/cli/common/messages/MessageCollector;)V
+	public fun generate (Lorg/jetbrains/kotlin/ir/declarations/IrModuleFragment;Lorg/jetbrains/kotlin/backend/common/extensions/IrPluginContext;)V
+	public fun getPlatformIntrinsicExtension (Lorg/jetbrains/kotlin/backend/common/LoweringContext;)Lorg/jetbrains/kotlin/backend/common/extensions/IrIntrinsicExtension;
+	public fun getShouldAlsoBeAppliedInKaptStubGenerationMode ()Z
+}
+
+public final class com/maximums/ir/LogKCPTransformer : org/jetbrains/kotlin/ir/visitors/IrElementTransformerVoid {
+	public fun <init> (Lorg/jetbrains/kotlin/backend/common/extensions/IrPluginContext;Lorg/jetbrains/kotlin/cli/common/messages/MessageCollector;)V
+	public fun visitFunction (Lorg/jetbrains/kotlin/ir/declarations/IrFunction;)Lorg/jetbrains/kotlin/ir/IrStatement;
+}
+

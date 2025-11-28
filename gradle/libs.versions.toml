@@ -1,0 +1,18 @@
+[versions]
+kotlin = "2.2.20"
+logkcp = "0.1.0"
+binary-validator = "0.16.3"
+junit = "4.13.2"
+build-config = "5.6.5"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit"}
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-std = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+logkcp-runtime = { group = "com.maximums.logkcp", name = "runtime", version.ref = "logkcp" }
+
+[plugins]
+logkcp = { id = "com.maximums.logkcp", version.ref = "logkcp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+build-config = { id = "com.github.gmazzo.buildconfig", version.ref = "build-config" }
+kotlin-binary-compatibility-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binary-validator" }

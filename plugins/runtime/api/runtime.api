@@ -1,0 +1,3 @@
+public abstract interface annotation class com/maximums/annotations/LogKCP : java/lang/annotation/Annotation {
+}
+

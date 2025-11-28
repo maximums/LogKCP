@@ -1,0 +1,27 @@
+public abstract class com/maximums/LogKCPExtension {
+	public fun <init> (Lorg/gradle/api/model/ObjectFactory;Lorg/gradle/api/file/ProjectLayout;)V
+	public final fun getIrDumpFile ()Lorg/gradle/api/file/RegularFileProperty;
+}
+
+public final class com/maximums/LogKCPKotlinPlugin : org/jetbrains/kotlin/gradle/plugin/KotlinCompilerPluginSupportPlugin {
+	public fun <init> ()V
+	public synthetic fun apply (Ljava/lang/Object;)V
+	public fun apply (Lorg/gradle/api/Project;)V
+	public fun applyToCompilation (Lorg/jetbrains/kotlin/gradle/plugin/KotlinCompilation;)Lorg/gradle/api/provider/Provider;
+	public fun getCompilerPluginId ()Ljava/lang/String;
+	public fun getPluginArtifact ()Lorg/jetbrains/kotlin/gradle/plugin/SubpluginArtifact;
+	public fun getPluginArtifactForNative ()Lorg/jetbrains/kotlin/gradle/plugin/SubpluginArtifact;
+	public fun isApplicable (Lorg/jetbrains/kotlin/gradle/plugin/KotlinCompilation;)Z
+}
+
+public final class com/maximums/LogKCPPlugin : org/gradle/api/Plugin {
+	public static final field Companion Lcom/maximums/LogKCPPlugin$Companion;
+	public static final field LOGKCP_EXT_NAME Ljava/lang/String;
+	public fun <init> ()V
+	public synthetic fun apply (Ljava/lang/Object;)V
+	public fun apply (Lorg/gradle/api/Project;)V
+}
+
+public final class com/maximums/LogKCPPlugin$Companion {
+}
+
