@@ -28,6 +28,23 @@ public final class com/maximums/PluginComponentRegistrar : org/jetbrains/kotlin/
 	public fun registerExtensions (Lorg/jetbrains/kotlin/compiler/plugin/CompilerPluginRegistrar$ExtensionStorage;Lorg/jetbrains/kotlin/config/CompilerConfiguration;)V
 }
 
+public final class com/maximums/fir/FirLogKCPPredicates {
+	public static final field INSTANCE Lcom/maximums/fir/FirLogKCPPredicates;
+}
+
+public final class com/maximums/fir/LogKCPExtensionRegistrar : org/jetbrains/kotlin/fir/extensions/FirExtensionRegistrar {
+	public fun <init> ()V
+}
+
+public final class com/maximums/fir/LogKCPObjectGenerator : org/jetbrains/kotlin/fir/extensions/FirDeclarationGenerationExtension {
+	public fun <init> (Lorg/jetbrains/kotlin/fir/FirSession;)V
+	public fun generateConstructors (Lorg/jetbrains/kotlin/fir/extensions/DeclarationGenerationContext$Member;)Ljava/util/List;
+	public fun generateNestedClassLikeDeclaration (Lorg/jetbrains/kotlin/fir/symbols/impl/FirClassSymbol;Lorg/jetbrains/kotlin/name/Name;Lorg/jetbrains/kotlin/fir/extensions/DeclarationGenerationContext$Nested;)Lorg/jetbrains/kotlin/fir/symbols/impl/FirClassLikeSymbol;
+	public fun getCallableNamesForClass (Lorg/jetbrains/kotlin/fir/symbols/impl/FirClassSymbol;Lorg/jetbrains/kotlin/fir/extensions/DeclarationGenerationContext$Member;)Ljava/util/Set;
+	public fun getNestedClassifiersNames (Lorg/jetbrains/kotlin/fir/symbols/impl/FirClassSymbol;Lorg/jetbrains/kotlin/fir/extensions/DeclarationGenerationContext$Nested;)Ljava/util/Set;
+	public fun registerPredicates (Lorg/jetbrains/kotlin/fir/extensions/FirDeclarationPredicateRegistrar;)V
+}
+
 public final class com/maximums/ir/LogKCPIrGenerationExtension : org/jetbrains/kotlin/backend/common/extensions/IrGenerationExtension {
 	public fun <init> (Lorg/jetbrains/kotlin/cli/common/messages/MessageCollector;)V
 	public fun generate (Lorg/jetbrains/kotlin/ir/declarations/IrModuleFragment;Lorg/jetbrains/kotlin/backend/common/extensions/IrPluginContext;)V
